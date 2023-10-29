@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 //db connection
+console.log(process.env.DB_URL);
 const connectWithDb = () => {
   mongoose
     .connect(process.env.DB_URL, {
