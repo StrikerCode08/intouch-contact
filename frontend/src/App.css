@@ -94,3 +94,12 @@ p{
   margin-bottom: 10px;
 }
 
+@media (max-width:500px) {
+  .contact-app{
+    width: 100%;
+  }
+  .contact-list{
+    flex: 3;
+    padding: 10px;
+  }
+}

@@ -95,10 +95,14 @@ function App() {
           {loading ? (
             <p>loading...</p>
           ) : (
-              <button onClick={() => {
-                setKeyword("")
-                setPage(page + 1)
-              }}>Load More</button>
+            <button
+              onClick={() => {
+                setKeyword("");
+                setPage(page + 1);
+              }}
+            >
+              Load More
+            </button>
           )}
         </ul>
       </div>
@@ -139,87 +143,87 @@ function App() {
                   isSubmitting,
                   /* and other goodies */
                 }) => (
-                    <form onSubmit={handleSubmit}>
-                      <img
-                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                        className="rounded-circle mb-3"
-                        style={{ width: "150px" }}
-                        alt="Avatar"
-                      />
-                      <div className="row">
-                        <div className="col-6">
-                          <label>Name</label>
-                          <input
-                            type="text"
-                            name="displayName"
-                            disabled={edit}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values["displayName"]}
-                            className="form-control form-control-sm mb-2"
-                          />
-                        </div>
-                        <div className="col-6">
-                          <label>Phone</label>
-                          <input
-                            type="text"
-                            name="homePhone"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            disabled={edit}
-                            value={values["homePhone"]}
-                            className="form-control form-control-sm mb-2"
-                          />
-                        </div>
+                  <form onSubmit={handleSubmit}>
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                      className="rounded-circle mb-3"
+                      style={{ width: "150px" }}
+                      alt="Avatar"
+                    />
+                    <div className="row">
+                      <div className="col-6-lg col-12-md col-12-sm">
+                        <label>Name</label>
+                        <input
+                          type="text"
+                          name="displayName"
+                          disabled={edit}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values["displayName"]}
+                          className="form-control form-control-sm mb-2"
+                        />
                       </div>
-                      <div className="row">
-                        <div className="col-6">
-                          <label>Email</label>
-                          <input
-                            type="email"
-                            name="emailAddress"
-                            disabled={edit}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values["emailAddress"]}
-                            className="form-control form-control-sm mb-2"
-                          />
-                        </div>
-                        <div className="col-6">
-                          <label>notes</label>
-                          <input
-                            type="text"
-                            name="notes"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            disabled={edit}
-                            value={values["notes"]}
-                            className="form-control form-control-sm mb-2"
-                          />
-                        </div>
+                      <div className="col-6-lg col-12-md col-12-sm">
+                        <label>Phone</label>
+                        <input
+                          type="text"
+                          name="homePhone"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          disabled={edit}
+                          value={values["homePhone"]}
+                          className="form-control form-control-sm mb-2"
+                        />
                       </div>
-                      <div className="row ">
-                        <div className="col-6 ">
-                          <button
-                            type="button"
-                            className="btn btn-light "
-                            onClick={() => setEdit(!edit)}
-                          >
-                            {edit ? "Edit" : "Cancel"}
-                          </button>
-                        </div>
-                        <div className="col-6 ">
-                          <button
-                            type="submit"
-                            className="btn btn-dark "
-                            disabled={edit || isSubmitting}
-                          >
-                            Save
-                          </button>
-                        </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-6-lg col-12-md col-12-sm">
+                        <label>Email</label>
+                        <input
+                          type="email"
+                          name="emailAddress"
+                          disabled={edit}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values["emailAddress"]}
+                          className="form-control form-control-sm mb-2"
+                        />
                       </div>
-                    </form>
-                  )}
+                      <div className="col-6-lg col-12-md col-12-sm">
+                        <label>notes</label>
+                        <input
+                          type="text"
+                          name="notes"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          disabled={edit}
+                          value={values["notes"]}
+                          className="form-control form-control-sm mb-2"
+                        />
+                      </div>
+                    </div>
+                    <div className="row ">
+                      <div className="col-6-lg col-12-md col-12-sm mb-2">
+                        <button
+                          type="button"
+                          className="btn btn-light "
+                          onClick={() => setEdit(!edit)}
+                        >
+                          {edit ? "Edit" : "Cancel"}
+                        </button>
+                      </div>
+                      <div className="col-6-lg col-12-md col-12-sm">
+                        <button
+                          type="submit"
+                          className="btn btn-dark "
+                          disabled={edit || isSubmitting}
+                        >
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                )}
               </Formik>
             </div>
           </div>
